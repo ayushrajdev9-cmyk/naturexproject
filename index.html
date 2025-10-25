@@ -25,25 +25,6 @@
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
-    /* Plant Helper Section */
-    #plant-helper-section {
-      background: #f7fdf7;
-      padding: 50px 0;
-      text-align: center;
-      border-top: 2px solid #d4f5d4;
-    }
-
-    #plant-helper-section input[type="file"] {
-      margin-bottom: 20px;
-    }
-
-    #result {
-      margin-top: 15px;
-      font-weight: bold;
-      color: #155724;
-      min-height: 50px;
-    }
   </style>
 </head>
 <body>
@@ -84,19 +65,7 @@
         <a href="medicinal.html" class="btn btn-outline-success btn-lg">💊 Medicinal Plants</a>
         <a href="fertilizers.html" class="btn btn-outline-success btn-lg">🌾 Fertilizers</a>
         <a href="floral.html" class="btn btn-outline-success btn-lg">🌸 Floral Heritage</a>
-        <a href="#plant-helper-section" class="btn btn-warning btn-lg">🌱 Plant Helper</a>
       </div>
-    </div>
-  </section>
-
-  <!-- Plant Helper Section -->
-  <section id="plant-helper-section">
-    <div class="container">
-      <h2 class="text-success mb-4">🌿 Plant Health Analyzer</h2>
-      <p class="text-muted mb-3">Upload a photo of your plant and our AI will suggest if it’s healthy and give remedies.</p>
-      <input type="file" id="plantImage" accept="image/*" class="form-control w-50 mx-auto">
-      <button id="analyzeBtn" class="btn btn-success mt-3">Analyze Plant</button>
-      <div id="result"></div>
     </div>
   </section>
 
@@ -171,6 +140,5 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="plant-helper.js"></script>
 </body>
 </html>

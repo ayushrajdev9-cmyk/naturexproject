@@ -14,7 +14,7 @@ analyzeBtn.addEventListener('click', async () => {
 
   const base64Image = await toBase64(file);
 
-  const response = await fetch("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", {
+  const response = await fetch("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", {
     method: "POST",
     headers: {
       "Authorization": `Bearer YOUR_API_KEY`, // 👈 sirf yaha apni key daal

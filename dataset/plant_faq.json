@@ -1,0 +1,15 @@
+import json
+
+data = []
+
+# Generate 10,000+ dummy plant prompts
+for i in range(1, 10001):
+    prompt = f"Question {i}: How to take care of plant {i}?"
+    response = f"Answer {i}: Water plant {i} regularly, give it sunlight, and check soil moisture."
+    data.append({"prompt": prompt, "response": response})
+
+# Save to JSON
+with open("dataset/plant_faq.json", "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+
+print("✅ 10,000+ prompts generated in dataset/plant_faq.json")

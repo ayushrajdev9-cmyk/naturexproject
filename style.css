@@ -16,6 +16,7 @@ header {
   text-align: center;
   padding: 2rem 1rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  contain: layout paint style; /* ✅ prevents global reflow */
 }
 
 header h1 {
@@ -37,6 +38,7 @@ header nav a:hover {
 /* Section */
 section {
   padding: 60px 20px;
+  contain: layout paint style; /* ✅ isolate layout per section */
 }
 
 section h2 {
@@ -51,16 +53,20 @@ section h2 {
   overflow: hidden;
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  will-change: transform; /* ✅ prepares GPU for smooth hover */
+  min-height: 350px; /* ✅ avoids layout jumps */
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translate3d(0, -5px, 0); /* ✅ GPU animation */
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .card img {
   height: 220px;
   object-fit: cover;
+  width: 100%;
+  display: block;
 }
 
 /* Buttons */
@@ -83,6 +89,7 @@ footer {
   padding: 15px;
   font-size: 0.9rem;
   margin-top: 40px;
+  contain: layout paint style; /* ✅ isolate footer reflows */
 }
 
 /* Responsive */

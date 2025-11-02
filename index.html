@@ -2,107 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="This is our web to promote Indian plants and seeds. We help people find the seed or plant they need.">
-  <meta name="keywords" content="Plants, seeds, nature, naturex">
-  <meta name="theme-color" content="#28a745">
-
-  <!-- Google Site Verification -->
   <meta name="google-site-verification" content="WDUCFNUzRfitTMIrVQt1mgnXp86LF__g27SlBFpREvk" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Explore Indian plants, seeds, and natural heritage with NatureX India. Learn about medicinal plants, sacred trees, floral heritage, and fertilizers.">
+  <meta name="keywords" content="Plants, Seeds, Nature, Medicinal, Sacred Trees, Floral Heritage, Fertilizers">
+  <meta name="robots" content="index, follow" />
 
-  <!-- Open Graph / Social Media -->
-  <meta property="og:title" content="NatureX India - Explore Indian Nature" />
-  <meta property="og:description" content="Explore Indian plants, seeds, sacred trees, and medicinal herbs with NatureX." />
-  <meta property="og:image" content="https://imgs.search.brave.com/pIz4npm5PbyWqPsrecIGPuLzBd6G5J5Q7s8w_QojPms/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzE2Lzg2LzU4Lzc0/LzM2MF9GXzE2ODY1/ODc0NjVfcWlZVFJW/ZFpaUmxkbG43Rldk/YjhzcTdqQ2RzZWNi/YjguanBn" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="NatureX India - Explore Indian Nature">
+  <meta property="og:description" content="Discover Indian plants, seeds, sacred trees, medicinal herbs, and floral heritage with NatureX India.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://imgs.search.brave.com/pIz4npm5PbyWqPsrecIGPuLzBd6G5J5Q7s8w_QojPms/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzE2Lzg2LzU4Lzc0/LzM2MF9GXzE2ODY1/ODc0NjVfcWlZVFJW/ZFpaUmxkbG43Rldk/YjhzcTdqQ2RzZWNi/YjguanBn">
+  <meta property="og:url" content="https://naturexindia.com">
 
   <title>NatureX India - Explore Indian Nature</title>
 
-  <!-- Preload Bootstrap CSS -->
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  </noscript>
-
-  <!-- Inline Critical CSS -->
+  <!-- Critical CSS inline -->
   <style>
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-      background-color: #ffffff;
-      color: #212529;
-    }
-    nav.navbar {
-      background-color: #28a745;
-    }
-    .btn {
-      transition: all 0.3s ease;
-    }
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    }
-    .fade-in {
-      animation: fadeIn 1.5s ease-in;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.5rem;
-    }
-    @media (max-width: 576px) {
-      .hero-buttons {
-        flex-direction: column;
-      }
-      .hero-buttons > a {
-        width: 100%;
-      }
-    }
-    footer {
-      background-color: #28a745;
-      color: white;
-      text-align: center;
-      padding: 1rem 0;
-      margin-top: 3rem;
-    }
-    /* Fix CLS by reserving image space */
-    .card-img-top {
-      aspect-ratio: 5 / 3;
-      object-fit: cover;
-      width: 100%;
-      display: block;
-    }
-    /* Accessibility: Ensure high contrast */
-    .text-success { color: #19692c !important; }
-    .bg-light { background-color: #f8f9fa !important; }
-    .text-muted { color: #6c757d !important; }
+    /* Navbar & basic styles */
+    body {margin:0; font-family: 'Segoe UI', sans-serif; line-height:1.5; color:#212529; background:#fff;}
+    a {text-decoration:none;}
+    .text-success {color:#198754!important;}
+    .btn {transition: all 0.3s ease; cursor:pointer;}
+    .btn:hover {transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.1);}
+    .card {border-radius: 0.5rem; overflow:hidden;}
+    .card-img-top {width:100%; display:block; aspect-ratio: 16/9; object-fit:cover;}
+    .fade-in {animation: fadeIn 1.2s ease-in;}
+    @keyframes fadeIn {from{opacity:0;transform:translateY(10px);} to{opacity:1;transform:translateY(0);}}
+    .navbar {padding:1rem 1rem;}
+    footer {text-align:center; padding:1rem 0; background:#198754; color:#fff;}
+    .lead {color:#495057;} /* better contrast than muted */
   </style>
 
-  <!-- Structured Data for SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "NatureX India",
-    "url": "https://yourwebsite.com",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://yourwebsite.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
+  <!-- Bootstrap CSS (async) -->
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
 </head>
 <body>
+
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark shadow" role="navigation">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow">
     <div class="container">
       <a class="navbar-brand fw-bold" href="index.html">🌿 NatureX India</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation menu">
@@ -127,10 +67,10 @@
   <section class="text-center py-5 bg-light fade-in">
     <div class="container">
       <h1 class="fw-bold text-success">Explore the Green Heritage of India</h1>
-      <p class="lead text-muted mt-3 mb-4">
+      <p class="lead mt-3 mb-4">
         From sacred banyan trees to healing herbs — dive into the biodiversity that defines our land.
       </p>
-      <div class="hero-buttons">
+      <div class="d-flex flex-wrap justify-content-center gap-2">
         <a href="index.html" class="btn btn-outline-success btn-lg" aria-label="Visit Homepage">🏡 Visit Homepage</a>
         <a href="species.html" class="btn btn-success btn-lg" aria-label="Explore Species">🌿 Species</a>
         <a href="seeds.html" class="btn btn-outline-success btn-lg" aria-label="View Seeds">🌱 Seeds</a>
@@ -145,11 +85,12 @@
   <!-- Highlights Section -->
   <main class="container my-5">
     <div class="row g-4">
-      <!-- Medicinal Plants Card -->
+      
+      <!-- Medicinal Plants -->
       <section class="col-md-3">
         <div class="card shadow-sm h-100">
-          <img src="https://imgs.search.brave.com/pIz4npm5PbyWqPsrecIGPuLzBd6G5J5Q7s8w_QojPms/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzE2Lzg2LzU4Lzc0/LzM2MF9GXzE2ODY1/ODc0NjVfcWlZVFJW/ZFpaUmxkbG43Rldk/YjhzcTdqQ2RzZWNi/YjguanBn"
-               class="card-img-top" loading="lazy" alt="Neem tree used in traditional medicine">
+          <img src="https://imgs.search.brave.com/pIz4npm5PbyWqPsrecIGPuLzBd6G5J5Q7s8w_QojPms/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzE2Lzg2LzU4Lzc0/LzM2MF9GXzE2ODY1/ODc0NjVfcWlZVFJW/ZFpaUmxkbG43Rldk/YjhzcTdqQ2RzZWNi/YjguanBn" 
+               class="card-img-top" loading="lazy" alt="Neem Tree, used in Ayurveda">
           <div class="card-body">
             <h2 class="h5 card-title text-success">Medicinal Plants</h2>
             <p class="card-text">
@@ -160,11 +101,11 @@
         </div>
       </section>
 
-      <!-- Sacred Trees Card -->
+      <!-- Sacred Trees -->
       <section class="col-md-3">
         <div class="card shadow-sm h-100">
           <img src="https://imgs.search.brave.com/YCXZAB-RD5cWK8xjd-gWwBIsbd7XJEeXoNWNInR3brU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9sYXMu/aWxsaW5vaXMuZWR1/L3NpdGVzL2RlZmF1/bHQvZmlsZXMvaW5s/aW5lLWltYWdlcy9C/YW55YW5UcmVlMjBf/c3RvcnlfdHJlZS5w/bmc"
-               class="card-img-top" loading="lazy" alt="Banyan tree revered in India">
+               class="card-img-top" loading="lazy" alt="Banyan Tree, sacred in India">
           <div class="card-body">
             <h2 class="h5 card-title text-success">Sacred Trees</h2>
             <p class="card-text">
@@ -175,11 +116,11 @@
         </div>
       </section>
 
-      <!-- Floral Heritage Card -->
+      <!-- Floral Heritage -->
       <section class="col-md-3">
         <div class="card shadow-sm h-100">
           <img src="https://imgs.search.brave.com/DxRH8PrlOqb7abkERdX4RXIbgxE5a8ySBwc_BgNoD18/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9iZWVq/d2FsYS5jb20vY2Ru/L3Nob3AvcHJvZHVj/dHMvTG90dXNQaW5r/Rmxvd2VyU2VlZHNf/MV84MDB4LmpwZz92/PTE2OTQxOTE1NjA"
-               class="card-img-top" loading="lazy" alt="Lotus flower, national flower of India">
+               class="card-img-top" loading="lazy" alt="Lotus Flower, national flower of India">
           <div class="card-body">
             <h2 class="h5 card-title text-success">Floral Heritage</h2>
             <p class="card-text">
@@ -190,11 +131,11 @@
         </div>
       </section>
 
-      <!-- Fertilizers Card -->
+      <!-- Fertilizers -->
       <section class="col-md-3">
         <div class="card shadow-sm h-100">
           <img src="https://thumbs.dreamstime.com/b/chemical-fertilizers-isolated-white-background-214187840.jpg"
-               class="card-img-top" loading="lazy" alt="Chemical and organic fertilizers">
+               class="card-img-top" loading="lazy" alt="Fertilizers, organic and chemical">
           <div class="card-body">
             <h2 class="h5 card-title text-success">Fertilizers</h2>
             <p class="card-text">
@@ -204,6 +145,7 @@
           </div>
         </div>
       </section>
+
     </div>
   </main>
 
@@ -212,7 +154,7 @@
     &copy; 2025 NatureX India. Made with ❤️ for nature lovers.
   </footer>
 
-  <!-- Bootstrap JS with defer -->
+  <!-- Bootstrap JS (deferred) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>

@@ -2,45 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="google-site-verification" content="WDUCFNUzRfitTMIrVQt1mgnXp86LF__g27SlBFpREvk" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Explore Indian plants, seeds, and natural heritage with NatureX India. Learn about medicinal plants, sacred trees, floral heritage, and fertilizers.">
-  <meta name="keywords" content="Plants, Seeds, Nature, Medicinal, Sacred Trees, Floral Heritage, Fertilizers">
-  <meta name="robots" content="index, follow" />
-
-  <!-- Open Graph / Social -->
-  <meta property="og:title" content="NatureX India - Explore Indian Nature">
-  <meta property="og:description" content="Discover Indian plants, seeds, sacred trees, medicinal herbs, and floral heritage with NatureX India.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://imgs.search.brave.com/pIz4npm5PbyWqPsrecIGPuLzBd6G5J5Q7s8w_QojPms/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzE2Lzg2LzU4Lzc0/LzM2MF9GXzE2ODY1/ODc0NjVfcWlZVFJW/ZFpaUmxkbG43Rldk/YjhzcTdqQ2RzZWNi/YjguanBn">
-  <meta property="og:url" content="https://naturexindia.com">
+  <meta name="description" content="Promoting Indian plants and seeds. Find the seed or plant you need with NatureX India.">
+  <meta name="keywords" content="Plants, seeds, nature, naturex">
+  <link rel="canonical" href="https://www.yoursite.com/index.html" />
 
   <title>NatureX India - Explore Indian Nature</title>
 
-  <!-- Critical CSS inline -->
+  <!-- Preload hero image for LCP -->
+  <link rel="preload" as="image" href="https://imgs.search.brave.com/pIz4npm5PbyWqPsrecIGPuLzBd6G5J5Q7s8w_QojPms/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzE2Lzg2LzU4Lzc0/LzM2MF9GXzE2ODY1/ODc0NjVfcWlZVFJW/ZFpaUmxkbG43Rldk/YjhzcTdqQ2RzZWNi/YjguanBn" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
-    /* Navbar & basic styles */
-    body {margin:0; font-family: 'Segoe UI', sans-serif; line-height:1.5; color:#212529; background:#fff;}
-    a {text-decoration:none;}
-    .text-success {color:#198754!important;}
-    .btn {transition: all 0.3s ease; cursor:pointer;}
-    .btn:hover {transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.1);}
-    .card {border-radius: 0.5rem; overflow:hidden;}
-    .card-img-top {width:100%; display:block; aspect-ratio: 16/9; object-fit:cover;}
-    .fade-in {animation: fadeIn 1.2s ease-in;}
-    @keyframes fadeIn {from{opacity:0;transform:translateY(10px);} to{opacity:1;transform:translateY(0);}}
-    .navbar {padding:1rem 1rem;}
-    footer {text-align:center; padding:1rem 0; background:#198754; color:#fff;}
-    .lead {color:#495057;} /* better contrast than muted */
+    /* Critical CSS inlined for faster load */
+    body { margin: 0; font-family: Arial, sans-serif; }
+    .btn { transition: all 0.3s ease; }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+    .fade-in { animation: fadeIn 1.5s ease-in; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .lead { color: #555 !important; } /* improved contrast */
+    footer { font-size: 0.9rem; }
   </style>
-
-  <!-- Bootstrap CSS (async) -->
-  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-
 </head>
 <body>
-
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow">
     <div class="container">
@@ -85,76 +71,74 @@
   <!-- Highlights Section -->
   <main class="container my-5">
     <div class="row g-4">
-      
-      <!-- Medicinal Plants -->
-      <section class="col-md-3">
+      <!-- Medicinal Plants Card -->
+      <article class="col-md-3">
         <div class="card shadow-sm h-100">
           <img src="https://imgs.search.brave.com/pIz4npm5PbyWqPsrecIGPuLzBd6G5J5Q7s8w_QojPms/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzE2Lzg2LzU4Lzc0/LzM2MF9GXzE2ODY1/ODc0NjVfcWlZVFJW/ZFpaUmxkbG43Rldk/YjhzcTdqQ2RzZWNi/YjguanBn" 
-               class="card-img-top" loading="lazy" alt="Neem Tree, used in Ayurveda">
+               class="card-img-top" alt="Neem Tree" width="500" height="500">
           <div class="card-body">
-            <h2 class="h5 card-title text-success">Medicinal Plants</h2>
+            <h2 class="card-title text-success h5">Medicinal Plants</h2>
             <p class="card-text">
               Explore natural healers like Neem, Tulsi, and Ashwagandha used for centuries in Ayurveda.
             </p>
             <a href="medicinal.html" class="btn btn-success mt-2" aria-label="Visit Medicinal Plants Page">Visit Medicinal Plants</a>
           </div>
         </div>
-      </section>
+      </article>
 
-      <!-- Sacred Trees -->
-      <section class="col-md-3">
+      <!-- Sacred Trees Card -->
+      <article class="col-md-3">
         <div class="card shadow-sm h-100">
-          <img src="https://imgs.search.brave.com/YCXZAB-RD5cWK8xjd-gWwBIsbd7XJEeXoNWNInR3brU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9sYXMu/aWxsaW5vaXMuZWR1/L3NpdGVzL2RlZmF1/bHQvZmlsZXMvaW5s/aW5lLWltYWdlcy9C/YW55YW5UcmVlMjBf/c3RvcnlfdHJlZS5w/bmc"
-               class="card-img-top" loading="lazy" alt="Banyan Tree, sacred in India">
+          <img src="https://imgs.search.brave.com/YCXZAB-RD5cWK8xjd-gWwBIsbd7XJEeXoNWNInR3brU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9sYXMu/aWxsaW5vaXMuZWR1/L3NpdGVzL2RlZmF1/bHQvZmlsZXMvaW5s/aW5lLWltYWdlcy9C/YW55YW5UcmVlMjBf/c3RvcnlfdHJlZS5w/bmc" 
+               class="card-img-top" alt="Banyan Tree" width="500" height="500">
           <div class="card-body">
-            <h2 class="h5 card-title text-success">Sacred Trees</h2>
+            <h2 class="card-title text-success h5">Sacred Trees</h2>
             <p class="card-text">
               Learn about trees like Peepal and Banyan revered in Indian traditions and spirituality.
             </p>
             <a href="sacred.html" class="btn btn-success mt-2" aria-label="Visit Sacred Trees Page">Visit Sacred Trees</a>
           </div>
         </div>
-      </section>
+      </article>
 
-      <!-- Floral Heritage -->
-      <section class="col-md-3">
+      <!-- Floral Heritage Card -->
+      <article class="col-md-3">
         <div class="card shadow-sm h-100">
-          <img src="https://imgs.search.brave.com/DxRH8PrlOqb7abkERdX4RXIbgxE5a8ySBwc_BgNoD18/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9iZWVq/d2FsYS5jb20vY2Ru/L3Nob3AvcHJvZHVj/dHMvTG90dXNQaW5r/Rmxvd2VyU2VlZHNf/MV84MDB4LmpwZz92/PTE2OTQxOTE1NjA"
-               class="card-img-top" loading="lazy" alt="Lotus Flower, national flower of India">
+          <img src="https://imgs.search.brave.com/DxRH8PrlOqb7abkERdX4RXIbgxE5a8ySBwc_BgNoD18/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9iZWVq/d2FsYS5jb20vY2Ru/L3Nob3AvcHJvZHVj/dHMvTG90dXNQaW5r/Rmxvd2VyU2VlZHNf/MV84MDB4LmpwZz92/PTE2OTQxOTE1NjA" 
+               class="card-img-top" alt="Lotus Flower" width="500" height="500">
           <div class="card-body">
-            <h2 class="h5 card-title text-success">Floral Heritage</h2>
+            <h2 class="card-title text-success h5">Floral Heritage</h2>
             <p class="card-text">
               Discover India’s national flower and its symbolism in culture and art.
             </p>
             <a href="floral.html" class="btn btn-success mt-2" aria-label="Visit Floral Heritage Page">Visit Floral Heritage</a>
           </div>
         </div>
-      </section>
+      </article>
 
-      <!-- Fertilizers -->
-      <section class="col-md-3">
+      <!-- Fertilizers Card -->
+      <article class="col-md-3">
         <div class="card shadow-sm h-100">
-          <img src="https://thumbs.dreamstime.com/b/chemical-fertilizers-isolated-white-background-214187840.jpg"
-               class="card-img-top" loading="lazy" alt="Fertilizers, organic and chemical">
+          <img src="https://thumbs.dreamstime.com/b/chemical-fertilizers-isolated-white-background-214187840.jpg" 
+               class="card-img-top" alt="Fertilizers" width="500" height="500">
           <div class="card-body">
-            <h2 class="h5 card-title text-success">Fertilizers</h2>
+            <h2 class="card-title text-success h5">Fertilizers</h2>
             <p class="card-text">
               Learn about organic, chemical, and bio fertilizers — and how they boost plant growth and soil health.
             </p>
             <a href="fertilizers.html" class="btn btn-success mt-2" aria-label="Visit Fertilizers Page">Visit Fertilizers</a>
           </div>
         </div>
-      </section>
-
+      </article>
     </div>
   </main>
 
   <!-- Footer -->
-  <footer>
+  <footer class="bg-success text-white text-center py-3 mt-5">
     &copy; 2025 NatureX India. Made with ❤️ for nature lovers.
   </footer>
 
-  <!-- Bootstrap JS (deferred) -->
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>

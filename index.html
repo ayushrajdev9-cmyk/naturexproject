@@ -78,7 +78,27 @@
       width: 100%;
       display: block;
     }
+    /* Accessibility: Ensure high contrast */
+    .text-success { color: #19692c !important; }
+    .bg-light { background-color: #f8f9fa !important; }
+    .text-muted { color: #6c757d !important; }
   </style>
+
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "NatureX India",
+    "url": "https://yourwebsite.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://yourwebsite.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
 </head>
 <body>
   <!-- Navbar -->
@@ -123,10 +143,10 @@
   </section>
 
   <!-- Highlights Section -->
-  <div class="container my-5">
+  <main class="container my-5">
     <div class="row g-4">
       <!-- Medicinal Plants Card -->
-      <div class="col-md-3">
+      <section class="col-md-3">
         <div class="card shadow-sm h-100">
           <img src="https://imgs.search.brave.com/pIz4npm5PbyWqPsrecIGPuLzBd6G5J5Q7s8w_QojPms/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzE2Lzg2LzU4Lzc0/LzM2MF9GXzE2ODY1/ODc0NjVfcWlZVFJW/ZFpaUmxkbG43Rldk/YjhzcTdqQ2RzZWNi/YjguanBn"
                class="card-img-top" loading="lazy" alt="Neem tree used in traditional medicine">
@@ -138,13 +158,13 @@
             <a href="medicinal.html" class="btn btn-success mt-2" aria-label="Visit Medicinal Plants Page">Visit Medicinal Plants</a>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- Sacred Trees Card -->
-      <div class="col-md-3">
+      <section class="col-md-3">
         <div class="card shadow-sm h-100">
           <img src="https://imgs.search.brave.com/YCXZAB-RD5cWK8xjd-gWwBIsbd7XJEeXoNWNInR3brU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9sYXMu/aWxsaW5vaXMuZWR1/L3NpdGVzL2RlZmF1/bHQvZmlsZXMvaW5s/aW5lLWltYWdlcy9C/YW55YW5UcmVlMjBf/c3RvcnlfdHJlZS5w/bmc"
-               class="card-img-top" loading="lazy" alt="Banyan tree revered in Indian traditions">
+               class="card-img-top" loading="lazy" alt="Banyan tree revered in India">
           <div class="card-body">
             <h2 class="h5 card-title text-success">Sacred Trees</h2>
             <p class="card-text">
@@ -153,10 +173,10 @@
             <a href="sacred.html" class="btn btn-success mt-2" aria-label="Visit Sacred Trees Page">Visit Sacred Trees</a>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- Floral Heritage Card -->
-      <div class="col-md-3">
+      <section class="col-md-3">
         <div class="card shadow-sm h-100">
           <img src="https://imgs.search.brave.com/DxRH8PrlOqb7abkERdX4RXIbgxE5a8ySBwc_BgNoD18/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9iZWVq/d2FsYS5jb20vY2Ru/L3Nob3AvcHJvZHVj/dHMvTG90dXNQaW5r/Rmxvd2VyU2VlZHNf/MV84MDB4LmpwZz92/PTE2OTQxOTE1NjA"
                class="card-img-top" loading="lazy" alt="Lotus flower, national flower of India">
@@ -168,13 +188,13 @@
             <a href="floral.html" class="btn btn-success mt-2" aria-label="Visit Floral Heritage Page">Visit Floral Heritage</a>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- Fertilizers Card -->
-      <div class="col-md-3">
+      <section class="col-md-3">
         <div class="card shadow-sm h-100">
           <img src="https://thumbs.dreamstime.com/b/chemical-fertilizers-isolated-white-background-214187840.jpg"
-               class="card-img-top" loading="lazy" alt="Chemical fertilizers for plant growth">
+               class="card-img-top" loading="lazy" alt="Chemical and organic fertilizers">
           <div class="card-body">
             <h2 class="h5 card-title text-success">Fertilizers</h2>
             <p class="card-text">
@@ -183,16 +203,16 @@
             <a href="fertilizers.html" class="btn btn-success mt-2" aria-label="Visit Fertilizers Page">Visit Fertilizers</a>
           </div>
         </div>
-      </div>
+      </section>
     </div>
-  </div>
+  </main>
 
   <!-- Footer -->
   <footer>
     &copy; 2025 NatureX India. Made with ❤️ for nature lovers.
   </footer>
 
-  <!-- Bootstrap JS Deferred -->
+  <!-- Bootstrap JS with defer -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>

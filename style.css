@@ -1,107 +1,136 @@
-/* NatureX - Custom Nature Theme (with Bootstrap) */
+/* NatureX Professional Theme */
+
+/* Color Variables */
+:root {
+  --primary-green: #2e7d32;
+  --secondary-green: #388e3c;
+  --dark-green: #1b5e20;
+  --light-bg: #f9fff9;
+  --text-dark: #1b1b1b;
+  --shadow: rgba(0,0,0,0.15);
+}
 
 /* Global */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #e8f5e9;
-  color: #1b5e20;
   margin: 0;
-  padding: 0;
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-dark);
+  line-height: 1.6;
 }
 
-/* Header */
-header {
-  background: linear-gradient(90deg, #2e7d32, #388e3c);
-  color: #fff;
-  text-align: center;
-  padding: 2rem 1rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  contain: layout paint style; /* ✅ prevents global reflow */
+/* Navbar */
+.navbar {
+  background: linear-gradient(90deg, var(--primary-green), var(--secondary-green));
 }
-
-header h1 {
+.navbar-brand span {
   font-weight: 700;
-  margin-bottom: 0.5rem;
 }
-
-header nav a {
-  color: #fff !important;
-  margin: 0 15px;
-  text-decoration: none;
+.nav-link {
   font-weight: 500;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+.nav-link.active {
+  border-bottom: 2px solid #fff;
+}
+.nav-link:hover {
+  color: #c8e6c9 !important;
 }
 
-header nav a:hover {
-  text-decoration: underline;
+/* Hero Section */
+.hero {
+  background: #f1f8f4;
+  padding: 80px 20px;
+  text-align: center;
+}
+.hero h1 {
+  font-weight: 700;
+  color: var(--primary-green);
+}
+.lead {
+  color: #3c4b3f;
+}
+.hero .btn {
+  margin: 8px;
 }
 
-/* Section */
-section {
-  padding: 60px 20px;
-  contain: layout paint style; /* ✅ isolate layout per section */
+/* Buttons */
+.btn {
+  transition: all 0.25s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px var(--shadow);
+}
+.btn-success {
+  background-color: var(--primary-green);
+  border: none;
+}
+.btn-success:hover {
+  background-color: var(--dark-green);
+}
+.btn-outline-success:hover {
+  background-color: var(--secondary-green);
+  color: #fff;
 }
 
-section h2 {
-  color: #2e7d32;
+/* Special Recover Button */
+.btn-recover {
+  background: linear-gradient(135deg, #43a047, var(--primary-green));
+  color: #fff !important;
+  padding: 12px 26px;
+  border-radius: 30px;
   font-weight: 600;
-  margin-bottom: 20px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(46,125,50,0.3);
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+}
+.btn-recover:hover {
+  background: linear-gradient(135deg, var(--dark-green), var(--primary-green));
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(27,94,32,0.4);
 }
 
 /* Cards */
 .card {
-  border-radius: 15px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  will-change: transform; /* ✅ prepares GPU for smooth hover */
-  min-height: 350px; /* ✅ avoids layout jumps */
+  box-shadow: 0 3px 8px var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-
 .card:hover {
-  transform: translate3d(0, -5px, 0); /* ✅ GPU animation */
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px var(--shadow);
 }
-
-.card img {
-  height: 220px;
+.card-title {
+  color: var(--primary-green);
+  font-weight: 600;
+}
+.card-img-top {
+  height: 200px;
   object-fit: cover;
-  width: 100%;
-  display: block;
-}
-
-/* Buttons */
-.btn-nature {
-  background-color: #2e7d32;
-  color: white;
-  border: none;
-  transition: background-color 0.2s ease-in-out;
-}
-
-.btn-nature:hover {
-  background-color: #1b5e20;
 }
 
 /* Footer */
 footer {
-  background-color: #1b5e20;
-  color: white;
+  background-color: var(--dark-green);
+  color: #fff;
   text-align: center;
-  padding: 15px;
-  font-size: 0.9rem;
-  margin-top: 40px;
-  contain: layout paint style; /* ✅ isolate footer reflows */
+  padding: 20px;
+  font-size: 0.95rem;
+  margin-top: 60px;
 }
 
-/* Responsive */
+/* Responsive Tweaks */
 @media (max-width: 768px) {
-  header h1 {
+  .hero {
+    padding: 60px 10px;
+  }
+  .hero h1 {
     font-size: 1.8rem;
   }
-  section {
-    padding: 40px 10px;
-  }
-  nav a {
-    display: block;
-    margin: 10px 0;
+  .card-img-top {
+    height: 180px;
   }
 }

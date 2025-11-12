@@ -8,9 +8,94 @@
   <link rel="canonical" href="https://www.naturex.duckdns.org/index.html" />
 
   <title>NatureX India - Explore Indian Nature</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Professional theme CSS (inline for demo; move to style.css if preferred) -->
+  <style>
+    :root {
+      --primary-green: #2e7d32;
+      --secondary-green: #388e3c;
+      --dark-green: #1b5e20;
+      --light-bg: #f9fff9;
+      --text-dark: #1b1b1b;
+      --shadow: rgba(0,0,0,0.15);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background-color: var(--light-bg);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: linear-gradient(90deg, var(--primary-green), var(--secondary-green));
+    }
+    .navbar-brand span { font-weight: 700; }
+    .nav-link { font-weight: 500; transition: color .25s ease, border-bottom .25s ease; }
+    .nav-link.active { border-bottom: 2px solid #fff; }
+    .nav-link:hover { color: #c8e6c9 !important; }
+
+    /* Hero */
+    .hero { background: #f1f8f4; padding: 80px 20px; }
+    .hero h1 { font-weight: 700; color: var(--primary-green); }
+    .lead { color: #3c4b3f; }
+
+    /* Buttons */
+    .btn { transition: all .25s ease; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px var(--shadow); }
+    .btn-success { background-color: var(--primary-green); border: none; }
+    .btn-success:hover { background-color: var(--dark-green); }
+    .btn-outline-success:hover { background-color: var(--secondary-green); color: #fff; }
+
+    /* Special Recover button */
+    .btn-recover {
+      background: linear-gradient(135deg, #43a047, var(--primary-green));
+      color: #fff !important;
+      padding: 12px 26px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(46,125,50,0.3);
+      transition: all .3s ease-in-out;
+      display: inline-block;
+    }
+    .btn-recover:hover {
+      background: linear-gradient(135deg, var(--dark-green), var(--primary-green));
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(27,94,32,0.4);
+    }
+
+    /* Cards */
+    .card {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 3px 8px var(--shadow);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px var(--shadow); }
+    .card-title { color: var(--primary-green); font-weight: 600; }
+    .card-img-top { height: 200px; object-fit: cover; }
+
+    /* Footer */
+    footer {
+      background-color: var(--dark-green);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.95rem;
+      margin-top: 60px;
+    }
+  </style>
 </head>
 <body>
   <!-- Navbar -->
@@ -20,9 +105,11 @@
         <img src="ayush-logo.png" alt="NatureX Logo" width="36" height="36" style="border-radius: 50%;">
         <span>NatureX India</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation menu">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <!-- IMPORTANT: Only Home is active on index.html -->
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
@@ -44,7 +131,9 @@
   <section class="hero text-center">
     <div class="container">
       <h1>Explore the Green Heritage of India</h1>
-      <p class="lead mt-3 mb-4">From sacred banyan trees to healing herbs — dive into the biodiversity that defines our land.</p>
+      <p class="lead mt-3 mb-4">
+        From sacred banyan trees to healing herbs — dive into the biodiversity that defines our land.
+      </p>
       <div class="d-flex flex-wrap justify-content-center gap-2">
         <a href="species.html" class="btn btn-success btn-lg">🌿 Species</a>
         <a href="seeds.html" class="btn btn-outline-success btn-lg">🌱 Seeds</a>
@@ -57,13 +146,13 @@
     </div>
   </section>
 
-  <!-- Highlights Section -->
+  <!-- Highlights: all cards restored -->
   <main class="container my-5">
     <div class="row g-4">
-      <!-- Species -->
+      <!-- Species Card -->
       <article class="col-md-4 col-lg-3">
         <div class="card h-100">
-          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&h=600&auto=format&fit=crop&q=80" alt="Forest Species" class="card-img-top">
+          <img src="https://sl.bing.net/g54oJnrmZoa">
           <div class="card-body">
             <h2 class="card-title h5">Species</h2>
             <p>Browse native plant species from diverse Indian ecosystems and learn their traits.</p>
@@ -72,10 +161,10 @@
         </div>
       </article>
 
-      <!-- Sacred Trees -->
+      <!-- Sacred Trees Card -->
       <article class="col-md-4 col-lg-3">
         <div class="card h-100">
-          <img src="https://images.unsplash.com/photo-1602526219043-2c8f3a1e6f6d?w=800&h=600&auto=format&fit=crop&q=80" alt="Banyan Tree" class="card-img-top">
+          <img src="https://unsplash.com/photos/a-close-up-of-a-bunch-of-flowers-I_mgHO6JuLs">
           <div class="card-body">
             <h2 class="card-title h5">Sacred Trees</h2>
             <p>Learn about Peepal and Banyan—trees revered across Indian traditions and spirituality.</p>
@@ -84,10 +173,10 @@
         </div>
       </article>
 
-      <!-- Seeds -->
+      <!-- Seeds Card -->
       <article class="col-md-4 col-lg-3">
         <div class="card h-100">
-          <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=800&h=600&auto=format&fit=crop&q=80" alt="Seeds" class="card-img-top">
+          <img src="https://source.unsplash.com/800x600/?seeds,planting" class="card-img-top" alt="Seeds">
           <div class="card-body">
             <h2 class="card-title h5">Seeds</h2>
             <p>Find high‑quality seeds and germination tips for home gardens and community projects.</p>
@@ -96,10 +185,10 @@
         </div>
       </article>
 
-      <!-- Medicinal Plants -->
+      <!-- Medicinal Plants Card -->
       <article class="col-md-4 col-lg-3">
         <div class="card h-100">
-          <img src="https://images.unsplash.com/photo-1620912189860-9e3d0f7e2a2d?w=800&h=600&auto=format&fit=crop&q=80" alt="Neem Tree" class="card-img-top">
+          <img src="https://source.unsplash.com/800x600/?neem,ayurveda" class="card-img-top" alt="Neem Tree">
           <div class="card-body">
             <h2 class="card-title h5">Medicinal Plants</h2>
             <p>Explore natural healers like Neem, Tulsi, and Ashwagandha used for centuries in Ayurveda.</p>
@@ -107,3 +196,52 @@
           </div>
         </div>
       </article>
+
+      <!-- Fertilizers Card -->
+      <article class="col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://source.unsplash.com/800x600/?fertilizer,soil" class="card-img-top" alt="Fertilizers">
+          <div class="card-body">
+            <h2 class="card-title h5">Fertilizers</h2>
+            <p>Compare organic, chemical, and bio fertilizers—boost growth while caring for soil health.</p>
+            <a href="fertilizers.html" class="btn btn-success mt-2">Visit Fertilizers</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Floral Heritage Card -->
+      <article class="col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://source.unsplash.com/800x600/?lotus,flower" class="card-img-top" alt="Lotus Flower">
+          <div class="card-body">
+            <h2 class="card-title h5">Floral Heritage</h2>
+            <p>Discover India’s iconic flowers and their symbolism across culture, art, and history.</p>
+            <a href="floral.html" class="btn btn-success mt-2">Visit Floral Heritage</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Recover Plant Card -->
+      <article class="col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1697471234567-I_mgHO6JuLs?w=800&h=600&auto=format&fit=crop&q=80" 
+     alt="Flowers close-up" class="card-img-top">
+          <div class="card-body">
+            <h2 class="card-title h5">Recover Plant</h2>
+            <p>Diagnose issues and revive stressed plants with simple steps and community tips.</p>
+            <a href="recover-plant.html" class="btn btn-recover mt-2">Open Recovery Guide</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 NatureX India. Made with ❤️ for nature lovers by Ayush & Anzar.
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+</body>
+</html>

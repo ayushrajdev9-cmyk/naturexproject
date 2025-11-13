@@ -6,8 +6,8 @@
   <meta name="description" content="Promoting Indian plants and seeds. Find the seed or plant you need with NatureX India.">
   <meta name="keywords" content="Plants, seeds, nature, naturex">
   <link rel="canonical" href="https://www.naturex.duckdns.org/index.html" />
+  <title>NatureX India - Explore Indian Nature Where The Nature Meets Knowledge</title>
 
-  <title>NatureX India - Explore Indian Nature Where The nature meets knowledge </title>
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -17,7 +17,6 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Neon Style -->
   <style>
     :root {
       --neon-green: #00ff88;
@@ -25,7 +24,7 @@
       --dark-bg: #001b1b;
       --card-bg: rgba(0, 30, 30, 0.7);
       --text-color: #e0fff7;
-      --shadow-glow: 0 0 10px var(--neon-green), 0 0 20px var(--neon-green), 0 0 40px var(--neon-green);
+      --shadow-glow: 0 0 10px var(--neon-green), 0 0 25px var(--neon-green), 0 0 50px var(--neon-blue);
     }
 
     body {
@@ -37,7 +36,7 @@
     /* Navbar */
     .navbar {
       background: linear-gradient(90deg, #004d40, #00695c);
-      box-shadow: 0 0 15px var(--neon-blue);
+      box-shadow: 0 0 20px var(--neon-blue);
     }
 
     .navbar-brand {
@@ -55,7 +54,7 @@
       text-shadow: var(--shadow-glow);
     }
 
-    /* Hero Section */
+    /* Hero */
     .hero {
       background: linear-gradient(145deg, #002d2d, #001b1b);
       padding: 80px 20px;
@@ -71,23 +70,20 @@
     /* Cards */
     .card {
       background: var(--card-bg);
+      border-radius: 16px;
       border: 1px solid rgba(0,255,255,0.3);
-      border-radius: 18px;
-      box-shadow: 0 0 15px rgba(0,255,170,0.2);
-      color: var(--text-color);
+      box-shadow: 0 0 10px rgba(0,255,255,0.15);
       transition: all 0.4s ease;
     }
     .card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 0 25px var(--neon-green), 0 0 50px var(--neon-blue);
+      box-shadow: 0 0 30px var(--neon-green), 0 0 50px var(--neon-blue);
     }
-
     .card-title {
       color: var(--neon-green);
-      text-shadow: 0 0 5px var(--neon-green), 0 0 15px var(--neon-blue);
       font-weight: 600;
+      text-shadow: 0 0 8px var(--neon-green);
     }
-
     .card-img-top {
       height: 200px;
       object-fit: cover;
@@ -95,12 +91,12 @@
     }
 
     /* Buttons */
-    .btn-success, .btn-outline-success, .btn-recover {
+    .btn {
       border-radius: 30px;
       font-weight: bold;
-      text-shadow: 0 0 5px #00ffcc;
       transition: all 0.3s ease;
     }
+
     .btn-success {
       background: linear-gradient(90deg, #00cc66, #00e6ff);
       border: none;
@@ -132,13 +128,13 @@
       box-shadow: 0 0 30px var(--neon-green);
     }
 
-    /* Footer */
     footer {
       background: #001919;
       color: var(--neon-green);
       text-shadow: var(--shadow-glow);
       padding: 20px;
       font-weight: 500;
+      margin-top: 40px;
       box-shadow: 0 -5px 30px rgba(0,255,200,0.2);
     }
   </style>
@@ -154,6 +150,7 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
@@ -174,7 +171,7 @@
   <!-- Hero -->
   <section class="hero text-center">
     <div class="container">
-      <h1>Explore the Green Heritage of India Where Nature Meets Knowledge</h1>
+      <h1>Explore the Green Heritage of India Where the Nature Meets Knowledge</h1>
       <p class="lead mt-3 mb-4">From sacred banyan trees to healing herbs — dive into the biodiversity that defines our land.</p>
       <div class="d-flex flex-wrap justify-content-center gap-2">
         <a href="species.html" class="btn btn-success btn-lg">🌿 Species</a>
@@ -189,19 +186,51 @@
     </div>
   </section>
 
-  <!-- Cards Section (same as yours, untouched content) -->
+  <!-- Cards -->
   <main class="container my-5">
     <div class="row g-4">
-      <!-- (Your original cards stay exactly same — images and all remain) -->
-      <!-- copy-paste your previous card list here, no need to change content -->
-    </div>
-  </main>
+      <!-- Species Card -->
+      <article class="col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://imgs.search.brave.com/i4I8URd9Y6SoN_CSLF8-vruSSYhkDGa-2VkSsJE646Y/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNTYv/NjI0Lzk4MC9zbWFs/bC94ZXJvc2ljeW9z/LW5hdHVyZS1iYWNr/Z3JvdW5kLXdpdGgt/dW5pcXVlLXN1Y2N1/bGVudC1wbGFudHMt/ZnJlZS1waG90by5q/cGc" class="card-img-top" alt="Species">
+          <div class="card-body">
+            <h2 class="card-title h5">Species</h2>
+            <p>Browse native plant species from diverse Indian ecosystems and learn their traits.</p>
+            <a href="species.html" class="btn btn-success mt-2">Visit Species</a>
+          </div>
+        </div>
+      </article>
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 NatureX India. Made with ❤️ for nature lovers by Ayush & Anzar.
-  </footer>
+      <!-- Sacred Trees -->
+      <article class="col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://imgs.search.brave.com/eKHBYNXGhvmVU9fVsBmPjZI0TYgUJlZ0mqFuaTxiMwA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzE2LzkzLzEyLzQ0/LzM2MF9GXzE2OTMx/MjQ0OTFfOUs3Rkox/Y1JMaTZ6Rk5qS0RU/ZTREOERoR1pYNVdi/WWouanBn" class="card-img-top" alt="Sacred Trees">
+          <div class="card-body">
+            <h2 class="card-title h5">Sacred Trees</h2>
+            <p>Learn about Peepal and Banyan—trees revered across Indian traditions and spirituality.</p>
+            <a href="sacred.html" class="btn btn-success mt-2">Visit Sacred Trees</a>
+          </div>
+        </div>
+      </article>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-</body>
-</html>
+      <!-- Seeds -->
+      <article class="col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://allianceofhope.org/wp-content/uploads/2021/01/AdobeStock_246697517-Cropped-to-GR-scaled.jpg" class="card-img-top" alt="Seeds">
+          <div class="card-body">
+            <h2 class="card-title h5">Seeds</h2>
+            <p>Find high-quality seeds and germination tips for home gardens and community projects.</p>
+            <a href="seeds.html" class="btn btn-success mt-2">Visit Seeds</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Medicinal Plants -->
+      <article class="col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://imgs.search.brave.com/e2G1C7hUgkgLZ43RXPUutEdLkEe_R3yvjeq58o5JaSc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZS5zbGlkZXNoYXJl/Y2RuLmNvbS9tZWRp/Y2luYWxwbGFudC0x/MzEwMDkwOTEwNDIt/cGhwYXBwMDEvNzUv/TWVkaWNpbmFsLXBs/YW50cy0xLTIwNDgu/anBn" class="card-img-top" alt="Medicinal">
+          <div class="card-body">
+            <h2 class="card-title h5">Medicinal Plants</h2>
+            <p>Explore natural healers like Neem, Tulsi, and Ashwagandha used for centuries in Ayurveda.</p>
+            <a href="medicinal.html" class="btn btn-success mt-2">Visit Medicinal Plants</a>
+          </div>

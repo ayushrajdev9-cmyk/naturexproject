@@ -17,7 +17,7 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Professional theme CSS -->
+  <!-- Professional theme CSS (inline for demo; move to style.css if preferred) -->
   <style>
     :root {
       --primary-green: #2e7d32;
@@ -46,27 +46,9 @@
     .nav-link:hover { color: #c8e6c9 !important; }
 
     /* Hero */
-    .hero {
-      position: relative;
-      background: url('hero-bg.jpg') center/cover no-repeat;
-      padding: 100px 20px;
-      color: #fff;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-      overflow: hidden;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 64, 0, 0.4);
-      z-index: 0;
-    }
-    .hero * {
-      position: relative;
-      z-index: 1;
-    }
-    .hero h1 { font-weight: 700; }
-    .lead { color: #f1f1f1; }
+    .hero { background: #f1f8f4; padding: 80px 20px; }
+    .hero h1 { font-weight: 700; color: var(--primary-green); }
+    .lead { color: #3c4b3f; }
 
     /* Buttons */
     .btn { transition: all .25s ease; }
@@ -127,6 +109,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
+      <!-- IMPORTANT: Only Home is active on index.html -->
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
@@ -164,11 +147,93 @@
     </div>
   </section>
 
-  <!-- Highlights -->
+  <!-- Highlights: all cards restored -->
   <main class="container my-5">
     <div class="row g-4">
-      <!-- All your cards unchanged -->
-      <!-- (same as you posted above) -->
+      <!-- Species Card -->
+      <article class="col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://imgs.search.brave.com/i4I8URd9Y6SoN_CSLF8-vruSSYhkDGa-2VkSsJE646Y/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNTYv/NjI0Lzk4MC9zbWFs/bC94ZXJvc2ljeW9z/LW5hdHVyZS1iYWNr/Z3JvdW5kLXdpdGgt/dW5pcXVlLXN1Y2N1/bGVudC1wbGFudHMt/ZnJlZS1waG90by5q/cGc">
+          <div class="card-body">
+            <h2 class="card-title h5">Species</h2>
+            <p>Browse native plant species from diverse Indian ecosystems and learn their traits.</p>
+            <a href="species.html" class="btn btn-success mt-2">Visit Species</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sacred Trees Card -->
+      <article class="col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://imgs.search.brave.com/eKHBYNXGhvmVU9fVsBmPjZI0TYgUJlZ0mqFuaTxiMwA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzE2LzkzLzEyLzQ0/LzM2MF9GXzE2OTMx/MjQ0OTFfOUs3Rkox/Y1JMaTZ6Rk5qS0RU/ZTREOERoR1pYNVdi/WWouanBn">
+          <div class="card-body">
+            <h2 class="card-title h5">Sacred Trees</h2>
+            <p>Learn about Peepal and Banyan—trees revered across Indian traditions and spirituality.</p>
+            <a href="sacred.html" class="btn btn-success mt-2">Visit Sacred Trees</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Seeds Card -->
+      <article class="col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://allianceofhope.org/wp-content/uploads/2021/01/AdobeStock_246697517-Cropped-to-GR-scaled.jpg">
+          <div class="card-body">
+            <h2 class="card-title h5">Seeds</h2>
+            <p>Find high‑quality seeds and germination tips for home gardens and community projects.</p>
+            <a href="seeds.html" class="btn btn-success mt-2">Visit Seeds</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Medicinal Plants Card -->
+      <article class="col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://imgs.search.brave.com/e2G1C7hUgkgLZ43RXPUutEdLkEe_R3yvjeq58o5JaSc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZS5zbGlkZXNoYXJl/Y2RuLmNvbS9tZWRp/Y2luYWxwbGFudC0x/MzEwMDkwOTEwNDIt/cGhwYXBwMDEvNzUv/TWVkaWNpbmFsLXBs/YW50cy0xLTIwNDgu/anBn">
+          <div class="card-body">
+            <h2 class="card-title h5">Medicinal Plants</h2>
+            <p>Explore natural healers like Neem, Tulsi, and Ashwagandha used for centuries in Ayurveda.</p>
+            <a href="medicinal.html" class="btn btn-success mt-2">Visit Medicinal Plants</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Fertilizers Card -->
+      <article class="col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://imgs.search.brave.com/Frkz3OEZZJkfv_NcwlnwNqLID44gQCBDc3Z-af4JkiM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA0LzIyLzQzLzkz/LzM2MF9GXzQyMjQz/OTM4OF8zY3l3TkZ0/d0cwbmpBejdhRjNO/WjFBRm81MklDcDli/ai5qcGc"
+          <div class="card-body">
+            <h2 class="card-title h5">Fertilizers</h2>
+            <p>Compare organic, chemical, and bio fertilizers—boost growth while caring for soil health.</p>
+            <a href="fertilizers.html" class="btn btn-success mt-2">Visit Fertilizers</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Floral Heritage Card -->
+      <article class="col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://imgs.search.brave.com/VMpA3E3kkiy6UbP4kwGAHNnpBZnCcMC4hF40oY_zouk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RzLzQwNC85/MzgyMmMyMzcxNzIw/NzcuWTNKdmNDdzBN/RGsyTERNeU1ETXNN/Q3cwTkRZLnBuZw"
+          <div class="card-body">
+            <h2 class="card-title h5">Floral Heritage</h2>
+            <p>Discover India’s iconic flowers and their symbolism across culture, art, and history.</p>
+            <a href="floral.html" class="btn btn-success mt-2">Visit Floral Heritage</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Recover Plant Card -->
+      <article class="col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://imgs.search.brave.com/yncCCpSl4bHCRpNKfujwBT4g7k3O_T2rMScboohSVvM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aHVy/c2QuY29tL3N0b3Jh/Z2UvbWVkaWEvMjEx/MjIvaGFja3MtdG8t/cmV2aXZlLWEtZGVh/ZC1wbGFudC1oZWFk/ZXItb24tdGh1cnNk/LmpwZw"
+     alt="Flowers close-up" class="card-img-top">
+          <div class="card-body">
+            <h2 class="card-title h5">Recover Plant</h2>
+            <p>Diagnose issues and revive stressed plants with simple steps and community tips.</p>
+            <a href="recover-plant.html" class="btn btn-recover mt-2">Open Recovery Guide</a>
+          </div>
+        </div>
+      </article>
     </div>
   </main>
 

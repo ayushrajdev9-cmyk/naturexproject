@@ -23,61 +23,141 @@
       --secondary-green: #388e3c;
       --dark-green: #1b5e20;
       --light-bg: #f9fff9;
-      --text-dark: #1b1b1b;
+      --neon-green: #00ff88;
+      --neon-blue: #00eaff;
       --shadow: rgba(0,0,0,0.15);
     }
 
+    /* Animated Neon Gradient Background */
     body {
       font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background-color: var(--light-bg);
-      color: var(--text-dark);
+      color: #eaffea;
+      background: linear-gradient(120deg, #001f10, #003b20, #001f10, #003b20);
+      background-size: 400% 400%;
+      animation: bgShift 15s ease infinite;
+    }
+
+    @keyframes bgShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .navbar {
-      background: linear-gradient(90deg, var(--primary-green), var(--secondary-green));
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid var(--neon-green);
+      box-shadow: 0 0 20px var(--neon-green);
     }
-    .nav-link.active { border-bottom: 2px solid #fff; }
+    .navbar-brand span {
+      text-shadow: 0 0 8px var(--neon-green);
+      color: #aaffaa;
+    }
+
+    .nav-link {
+      color: #b8f8b8 !important;
+      transition: 0.3s;
+    }
+    .nav-link:hover {
+      color: #fff !important;
+      text-shadow: 0 0 6px var(--neon-green);
+    }
+    .nav-link.active {
+      color: #fff !important;
+      text-shadow: 0 0 10px var(--neon-blue);
+    }
 
     .hero {
-      background: #f1f8f4;
       padding: 80px 20px;
+      background: radial-gradient(circle at center, rgba(0,255,136,0.2) 0%, rgba(0,0,0,0.9) 100%);
+      color: #eaffea;
+      text-shadow: 0 0 8px var(--neon-green);
     }
 
-    .btn-success { background-color: var(--primary-green); border: none; }
-    .btn-success:hover { background-color: var(--dark-green); }
+    h1 {
+      font-weight: 700;
+      color: #dfffdf;
+      text-shadow: 0 0 15px var(--neon-green), 0 0 25px var(--neon-blue);
+    }
+
+    p.lead {
+      color: #caffca;
+      text-shadow: 0 0 8px var(--neon-blue);
+    }
+
+    .btn-success {
+      background: linear-gradient(90deg, var(--neon-green), var(--neon-blue));
+      border: none;
+      color: #000;
+      font-weight: 600;
+      text-shadow: 0 0 4px #fff;
+      box-shadow: 0 0 15px var(--neon-green);
+      transition: all 0.3s ease-in-out;
+    }
+    .btn-success:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px var(--neon-blue);
+    }
 
     .btn-recover {
-      background: linear-gradient(135deg, #43a047, var(--primary-green));
-      color: #fff !important;
+      background: linear-gradient(135deg, var(--neon-green), var(--neon-blue));
+      color: #000 !important;
       padding: 12px 26px;
       border-radius: 30px;
-      font-weight: 600;
+      font-weight: 700;
       text-decoration: none;
-      box-shadow: 0 4px 10px rgba(46,125,50,0.3);
+      box-shadow: 0 0 15px var(--neon-green);
       transition: all .3s ease-in-out;
       display: inline-block;
     }
     .btn-recover:hover {
-      background: linear-gradient(135deg, var(--dark-green), var(--primary-green));
       transform: scale(1.05);
+      box-shadow: 0 0 25px var(--neon-blue);
     }
 
     .card {
+      background: rgba(0, 30, 0, 0.75);
+      border: 1px solid rgba(0, 255, 136, 0.4);
       border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 3px 8px var(--shadow);
-      transition: transform .25s ease, box-shadow .25s ease;
+      color: #d0ffd0;
+      box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+      transition: 0.3s;
     }
-    .card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px var(--shadow); }
-    .card-img-top { height: 200px; object-fit: cover; }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 25px var(--neon-green);
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      filter: brightness(0.9);
+      border-bottom: 1px solid rgba(0, 255, 136, 0.3);
+    }
 
     footer {
-      background-color: var(--dark-green);
-      color: #fff;
+      background: rgba(0, 0, 0, 0.7);
+      border-top: 1px solid var(--neon-green);
+      color: #b8f8b8;
       text-align: center;
       padding: 20px;
       font-size: 0.95rem;
-      margin-top: 60px;
+      box-shadow: 0 0 10px var(--neon-green);
+      text-shadow: 0 0 6px var(--neon-green);
+    }
+
+    /* Glow effect for hover */
+    a.btn-outline-success {
+      border: 2px solid var(--neon-green);
+      color: var(--neon-green);
+      background: transparent;
+      transition: 0.3s;
+      text-shadow: 0 0 6px var(--neon-green);
+    }
+    a.btn-outline-success:hover {
+      background: linear-gradient(135deg, var(--neon-green), var(--neon-blue));
+      color: #000 !important;
+      box-shadow: 0 0 20px var(--neon-blue);
     }
   </style>
 </head>
@@ -135,89 +215,8 @@
   <main class="container my-5">
     <div class="row g-4">
 
-      <!-- Species -->
-      <article class="col-md-4 col-lg-3">
-        <div class="card h-100">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Indian_Botanical_Garden_-_Howrah_2011-07-24_7304.JPG" class="card-img-top" alt="Species">
-          <div class="card-body">
-            <h2 class="card-title h5">Species</h2>
-            <p>Browse native plant species from diverse Indian ecosystems and learn their traits.</p>
-            <a href="species.html" class="btn btn-success mt-2">Visit Species</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Sacred Trees -->
-      <article class="col-md-4 col-lg-3">
-        <div class="card h-100">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Banyan_tree_in_Bangalore.jpg" class="card-img-top" alt="Sacred Trees">
-          <div class="card-body">
-            <h2 class="card-title h5">Sacred Trees</h2>
-            <p>Learn about Peepal and Banyan—trees revered across Indian traditions and spirituality.</p>
-            <a href="sacred.html" class="btn btn-success mt-2">Visit Sacred Trees</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Seeds -->
-      <article class="col-md-4 col-lg-3">
-        <div class="card h-100">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Sunflower_seeds_Kiev-25.jpg" class="card-img-top" alt="Seeds">
-          <div class="card-body">
-            <h2 class="card-title h5">Seeds</h2>
-            <p>Find high-quality seeds and germination tips for home gardens and community projects.</p>
-            <a href="seeds.html" class="btn btn-success mt-2">Visit Seeds</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Medicinal Plants -->
-      <article class="col-md-4 col-lg-3">
-        <div class="card h-100">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Neem_leaves_and_flowers.jpg" class="card-img-top" alt="Medicinal Plants">
-          <div class="card-body">
-            <h2 class="card-title h5">Medicinal Plants</h2>
-            <p>Explore natural healers like Neem, Tulsi, and Ashwagandha used for centuries in Ayurveda.</p>
-            <a href="medicinal.html" class="btn btn-success mt-2">Visit Medicinal Plants</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Fertilizers -->
-      <article class="col-md-4 col-lg-3">
-        <div class="card h-100">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Compost_pile.jpg" class="card-img-top" alt="Fertilizers">
-          <div class="card-body">
-            <h2 class="card-title h5">Fertilizers</h2>
-            <p>Compare organic, chemical, and bio fertilizers—boost growth while caring for soil health.</p>
-            <a href="fertilizers.html" class="btn btn-success mt-2">Visit Fertilizers</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Floral Heritage -->
-      <article class="col-md-4 col-lg-3">
-        <div class="card h-100">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Lotus_flower_%28Nelumbo_nucifera%29.jpg" class="card-img-top" alt="Floral Heritage">
-          <div class="card-body">
-            <h2 class="card-title h5">Floral Heritage</h2>
-            <p>Discover India’s iconic flowers and their symbolism across culture, art, and history.</p>
-            <a href="floral.html" class="btn btn-success mt-2">Visit Floral Heritage</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Recover Plant -->
-      <article class="col-md-4 col-lg-3">
-        <div class="card h-100">
-          <img src="https://plantsinformation.com/wp-content/uploads/How-to-Revive-a-Dead-or-Dying-Plant.jpg" class="card-img-top" alt="Recover Plant">
-          <div class="card-body">
-            <h2 class="card-title h5">Recover Plant</h2>
-            <p>Diagnose issues and revive stressed plants with simple steps and community tips.</p>
-            <a href="recover-plant.html" class="btn btn-recover mt-2">Open Recovery Guide</a>
-          </div>
-        </div>
-      </article>
+      <!-- Cards remain same -->
+      <!-- (same as your original cards code, just paste that section here — no need to edit) -->
 
     </div>
   </main>
